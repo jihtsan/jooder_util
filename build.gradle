@@ -1,0 +1,31 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile 'org.mongodb:mongo-java-driver:3.8.1'
+    compile 'com.jayway.jsonpath:json-path:2.7.0'
+    compile 'com.google.code.gson:gson:2.9.0'
+    implementation 'org.freemarker:freemarker:2.3.30'
+    implementation 'org.apache.poi:poi-ooxml:5.0.0'
+    implementation 'com.alibaba:fastjson:1.2.75'
+    implementation 'cn.hutool:hutool-all:5.6.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
